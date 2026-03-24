@@ -1,0 +1,22 @@
+my_list = []
+
+for i in range(1, 10):
+    my_list.append(i)
+
+print("Original list:", my_list)
+print("Length of list:", len(my_list))
+print()
+
+y = 0
+for x in range(len(my_list)):
+    if x < len(my_list) - 1:
+        if my_list[x] == y:
+            del my_list[x]
+        else:
+            y =y + 1
+            break
+    else:
+        break
+
+print("The list with unique elements only.")
+print (my_list)
